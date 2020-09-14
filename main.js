@@ -13,6 +13,7 @@ var autoSpawn       = require('auto.spawn');
 var autoTower       = require('auto.tower');
 var autoWork        = require('auto.work');
 var stuffPower      = require('stuff.power');
+var stuffTools      = require('stuff.tools');
 
 var marketMode = 1;
 
