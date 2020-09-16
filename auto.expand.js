@@ -1,5 +1,5 @@
-var targetRoom = '';
-var expandRoom = '';
+var targetRoom = ''; // to room
+var expandRoom = ''; // from room
 var finished = 1;
 
 var autoExpand = {
@@ -16,13 +16,14 @@ var autoExpand = {
             else {
                 finished = 0;
             }
+            // var spawns = Game.flags.Flag_Spawn.room.find(FIND_STRUCTURES, {
             var spawns = Game.rooms[expandRoom].find(FIND_STRUCTURES, {
                 filter: spawn => (spawn.structureType == STRUCTURE_SPAWN) && (spawn.spawning == undefined)
             });
             if (spawns.length > 0) {
                 if (spawns[0].spawnCreep([CLAIM,CLAIM,MOVE,MOVE], 'claim', {memory:{role:'claim'}}) != ERR_NAME_EXISTS) {}
                 if (spawns[0].spawnCreep([WORK,WORK,WORK,WORK,WORK,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE], 'expandBuilder', {memory:{role:'expandBuilder'}}) != ERR_NAME_EXISTS) {}
-                // if (spawns[0].spawnCreep([WORK,WORK,WORK,WORK,WORK,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE], 'expandUpgrader', {memory:{role:'expandUpgrader'}}) != ERR_NAME_EXISTS) {}
+                if (spawns[0].spawnCreep([WORK,WORK,WORK,WORK,WORK,CARRY,CARRY,CARRY,CARRY,MOVE,MOVE,MOVE,MOVE], 'expandUpgrader', {memory:{role:'expandUpgrader'}}) != ERR_NAME_EXISTS) {}
                 
                 if (Game.rooms[targetRoom].controller.owner == undefined) {
                     if (Game.creeps['claim'] != undefined) {

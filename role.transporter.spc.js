@@ -9,7 +9,6 @@ var roleTransporterSpc = {
         var nuker = creep.room.find(FIND_STRUCTURES, {
             filter: (structure) => structure.structureType == STRUCTURE_NUKER
         });
-        if (creep.room.name == 'W34N2') console.log(nuker.length > 0 && nuker[0].store.getFreeCapacity(RESOURCE_GHODIUM) > 0);
         if (creep.store.getFreeCapacity() > 0) {
             if (factory[0] && factory[0].store.getUsedCapacity(RESOURCE_BATTERY) > 0) {
                 // console.log(1);
@@ -44,7 +43,6 @@ var roleTransporterSpc = {
         }
         else {
             if (creep.store.getUsedCapacity(RESOURCE_BATTERY) > 0) {
-                console.log(creep.transfer(creep.room.terminal, RESOURCE_BATTERY))
                 if (creep.transfer(creep.room.terminal, RESOURCE_BATTERY) == ERR_NOT_IN_RANGE) {
                     creep.moveTo(creep.room.terminal, {visualizePathStyle: {stroke: '#ffaa00'}});
                 }

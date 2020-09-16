@@ -1,3 +1,4 @@
+var W31N4 = require('auto.spawn.W31N4');
 var W31N5 = require('auto.spawn.W31N5');
 var W32N4 = require('auto.spawn.W32N4');
 var W32N5 = require('auto.spawn.W32N5');
@@ -8,6 +9,7 @@ var W34N3 = require('auto.spawn.W34N3');
 var autoSpawn = {
 
     run: function() {
+        W31N4.run();
         W31N5.run();
         W32N4.run();
         W32N5.run();
