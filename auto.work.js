@@ -1,3 +1,10 @@
+/*
+ * @Author: PlanC
+ * @Date: 2020-08-20 13:58:36
+ * @LastEditTime: 2020-08-20 14:09:35
+ * @FilePath: \Screeps\auto.work.js
+ */
+
 var roleBuilder         = require('role.builder');
 var roleExperimenter    = require('role.experimenter');
 var roleHarvester       = require('role.harvester');
@@ -10,45 +17,45 @@ var roleTransporterSpc  = require('role.transporter.spc');
 var roleUpgrader        = require('role.upgrader');
 
 var autoWork = {
-    run: function() {
-        // roleTransporterTest.run(Game.creeps['test']);
-        for (var name in Game.creeps) {
-            var creep = Game.creeps[name];
-            if (creep.memory.role == 'builder') {
-                roleBuilder.run(creep);
-            }
-            if (creep.memory.role == 'experimenter') {
-                roleExperimenter.run(creep);
-            }
-            if (creep.memory.role == 'harvester') {
-                roleHarvester.run(creep);
-            }
-            if (creep.memory.role == 'harvesterFar') {
-                roleHarvesterFar.run(creep);
-            }
-            if (creep.memory.role == 'miner') {
-                roleMiner.run(creep);
-            }
-            if (creep.memory.role == 'repairer') {
-                roleRepairer.run(creep);
-            }
-            if (creep.memory.role == 'supplier') {
-                roleSupplier.run(creep);
-            }
-            if (creep.memory.role == 'transporter') {
-                roleTransporter.run(creep);
-            }
-            if (creep.memory.role == 'transporterSpc') {
-                roleTransporterSpc.run(creep);
-            }
-            if (creep.memory.role == 'upgrader') {
-                roleUpgrader.run(creep);
-            }
-            if (creep.hits < creep.hitsMax) {
-                creep.say('Help ME !');
-            }
-        }
-    }
+	run: function() {
+		// roleTransporterTest.run(Game.creeps['test']);
+		for (var name in Game.creeps) {
+			var creep = Game.creeps[name];
+			if (creep.memory.role == 'builder') {
+				roleBuilder.run(creep);
+			}
+			if (creep.memory.role == 'experimenter') {
+				roleExperimenter.run(creep);
+			}
+			if (creep.memory.role == 'harvester') {
+				roleHarvester.run(creep);
+			}
+			if (creep.memory.role == 'harvesterFar') {
+				roleHarvesterFar.run(creep);
+			}
+			if (creep.memory.role == 'miner') {
+				roleMiner.run(creep);
+			}
+			if (creep.memory.role == 'repairer') {
+				roleRepairer.run(creep);
+			}
+			if (creep.memory.role == 'supplier') {
+				roleSupplier.run(creep);
+			}
+			if (creep.memory.role == 'transporter') {
+				roleTransporter.run(creep);
+			}
+			if (creep.memory.role == 'transporterSpc') {
+				roleTransporterSpc.run(creep);
+			}
+			if (creep.memory.role == 'upgrader') {
+				roleUpgrader.run(creep);
+			}
+			if (creep.hits < creep.hitsMax) {
+				creep.say('Help ME !');
+			}
+		}
+	}
 }
 
 module.exports = autoWork;
