@@ -1,3 +1,10 @@
+/*
+ * @Author: PlanC
+ * @Date: 2020-09-15 20:35:24
+ * @LastEditTime: 2020-09-16 18:11:23
+ * @FilePath: \default\auto.spawn.W31N4.js
+ */
+
 var allowBuilder = 1;
 
 var expectedHarvesters = 1;

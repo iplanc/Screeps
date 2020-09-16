@@ -1,3 +1,10 @@
+/*
+ * @Author: PlanC
+ * @Date: 2020-09-07 20:38:10
+ * @LastEditTime: 2020-09-16 18:10:45
+ * @FilePath: \default\auto.export.worldVisual.js
+ */
+
 var worldVisualize = {
     run: function() {
         for (var name in Game.creeps) {
