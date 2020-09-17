@@ -5,7 +5,7 @@
  * @FilePath: \Screeps\main.js
  */
 
- var autoattack      = require('auto.attack');
+var autoattack      = require('auto.attack');
 var autodefence     = require('auto.defence');
 var autoexpand      = require('auto.expand');
 var exportConsole   = require('auto.export.console');
