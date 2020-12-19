@@ -28,6 +28,12 @@
           "#d44a3a"
         ],
         "datasource": "ScreepsPlus-Graphite",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
         "format": "none",
         "gauge": {
           "maxValue": 100,
@@ -42,7 +48,7 @@
           "x": 0,
           "y": 0
         },
-        "id": 4,
+        "id": 31,
         "interval": null,
         "links": [],
         "mappingType": 1,
@@ -59,7 +65,6 @@
         "maxDataPoints": 100,
         "nullPointMode": "connected",
         "nullText": null,
-        "options": {},
         "postfix": "",
         "postfixFontSize": "50%",
         "prefix": "",
@@ -83,7 +88,7 @@
         "targets": [
           {
             "refId": "A",
-            "target": "screeps.planc.shard3.gameTime"
+            "target": "screeps.planc.shard2.gameTime"
           }
         ],
         "thresholds": "",
@@ -103,47 +108,51 @@
       },
       {
         "datasource": null,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "decimals": 2,
+            "displayName": "",
+            "mappings": [],
+            "max": 100,
+            "min": 0,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "percent"
+          },
+          "overrides": []
+        },
         "gridPos": {
-          "h": 8,
-          "w": 4,
+          "h": 7,
+          "w": 6,
           "x": 0,
           "y": 2
         },
         "id": 6,
         "options": {
-          "fieldOptions": {
+          "orientation": "auto",
+          "reduceOptions": {
             "calcs": [
               "lastNotNull"
             ],
-            "defaults": {
-              "decimals": 2,
-              "mappings": [],
-              "max": 100,
-              "min": 0,
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green",
-                    "value": null
-                  }
-                ]
-              },
-              "title": "",
-              "unit": "percent"
-            },
-            "overrides": [],
+            "fields": "",
             "values": false
           },
-          "orientation": "auto",
           "showThresholdLabels": false,
           "showThresholdMarkers": true
         },
-        "pluginVersion": "6.6.0",
+        "pluginVersion": "7.3.1",
         "targets": [
           {
             "refId": "A",
-            "target": "screeps.planc.shard3.gcl"
+            "target": "screeps.planc.shard2.gcl"
           }
         ],
         "timeFrom": null,
@@ -157,12 +166,19 @@
         "dashLength": 10,
         "dashes": false,
         "datasource": null,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "links": []
+          },
+          "overrides": []
+        },
         "fill": 1,
         "fillGradient": 0,
         "gridPos": {
-          "h": 10,
-          "w": 8,
-          "x": 4,
+          "h": 9,
+          "w": 12,
+          "x": 6,
           "y": 2
         },
         "hiddenSeries": false,
@@ -181,15 +197,16 @@
         "linewidth": 1,
         "nullPointMode": "connected",
         "options": {
-          "dataLinks": []
+          "alertThreshold": true
         },
         "percentage": false,
+        "pluginVersion": "7.3.1",
         "pointradius": 2,
         "points": false,
         "renderer": "flot",
         "seriesOverrides": [
           {
-            "alias": "screeps.planc.shard3.bucket",
+            "alias": "screeps.planc.shard2.bucket",
             "yaxis": 2
           }
         ],
@@ -200,12 +217,12 @@
           {
             "refCount": 0,
             "refId": "A",
-            "target": "screeps.planc.shard3.cpu"
+            "target": "screeps.planc.shard2.cpu"
           },
           {
             "refCount": 0,
             "refId": "B",
-            "target": "screeps.planc.shard3.bucket"
+            "target": "screeps.planc.shard2.bucket"
           }
         ],
         "thresholds": [],
@@ -251,166 +268,51 @@
         }
       },
       {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
         "datasource": null,
-        "decimals": 3,
-        "description": "",
-        "fill": 1,
-        "fillGradient": 0,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "decimals": 2,
+            "mappings": [],
+            "max": 100,
+            "min": 0,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "red",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "percent"
+          },
+          "overrides": []
+        },
         "gridPos": {
-          "h": 10,
-          "w": 8,
-          "x": 12,
-          "y": 2
-        },
-        "hiddenSeries": false,
-        "id": 16,
-        "legend": {
-          "alignAsTable": true,
-          "avg": true,
-          "current": true,
-          "hideEmpty": false,
-          "hideZero": false,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "nullPointMode": "connected",
-        "options": {
-          "dataLinks": []
-        },
-        "percentage": false,
-        "pointradius": 2,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [
-          {
-            "alias": "screeps.planc.shard3.valueToken",
-            "color": "rgb(255, 255, 255)",
-            "yaxis": 2
-          },
-          {
-            "alias": "screeps.planc.shard3.valueEnergy",
-            "color": "#E0B400"
-          },
-          {
-            "alias": "screeps.planc.shard3.valueUtrium",
-            "color": "#8F3BB8"
-          }
-        ],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "refCount": 0,
-            "refId": "A",
-            "target": "screeps.planc.shard3.valueEnergy"
-          },
-          {
-            "refCount": 0,
-            "refId": "B",
-            "target": "screeps.planc.shard3.valueUtrium"
-          },
-          {
-            "refCount": 0,
-            "refId": "C",
-            "target": "screeps.planc.shard3.valueToken",
-            "textEditor": false
-          }
-        ],
-        "thresholds": [],
-        "timeFrom": null,
-        "timeRegions": [],
-        "timeShift": null,
-        "title": "Market",
-        "tooltip": {
-          "shared": true,
-          "sort": 0,
-          "value_type": "individual"
-        },
-        "type": "graph",
-        "xaxis": {
-          "buckets": null,
-          "mode": "time",
-          "name": null,
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "decimals": 3,
-            "format": "short",
-            "label": "Credits",
-            "logBase": 1,
-            "max": null,
-            "min": "0",
-            "show": true
-          },
-          {
-            "decimals": 3,
-            "format": "short",
-            "label": "Credits (M)",
-            "logBase": 1,
-            "max": null,
-            "min": "0",
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false,
-          "alignLevel": null
-        }
-      },
-      {
-        "datasource": null,
-        "gridPos": {
-          "h": 8,
-          "w": 4,
-          "x": 20,
+          "h": 7,
+          "w": 6,
+          "x": 18,
           "y": 2
         },
         "id": 8,
         "options": {
-          "fieldOptions": {
+          "orientation": "auto",
+          "reduceOptions": {
             "calcs": [
               "lastNotNull"
             ],
-            "defaults": {
-              "decimals": 2,
-              "mappings": [],
-              "max": 100,
-              "min": 0,
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "red",
-                    "value": null
-                  }
-                ]
-              },
-              "unit": "percent"
-            },
-            "overrides": [],
+            "fields": "",
             "values": false
           },
-          "orientation": "auto",
           "showThresholdLabels": false,
           "showThresholdMarkers": true
         },
-        "pluginVersion": "6.6.0",
+        "pluginVersion": "7.3.1",
         "targets": [
           {
             "refId": "A",
-            "target": "screeps.planc.shard3.gpl"
+            "target": "screeps.planc.shard2.gpl"
           }
         ],
         "timeFrom": null,
@@ -430,6 +332,12 @@
         ],
         "datasource": null,
         "decimals": null,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
         "format": "none",
         "gauge": {
           "maxValue": 100,
@@ -440,9 +348,9 @@
         },
         "gridPos": {
           "h": 2,
-          "w": 4,
+          "w": 6,
           "x": 0,
-          "y": 10
+          "y": 9
         },
         "id": 10,
         "interval": null,
@@ -461,7 +369,6 @@
         "maxDataPoints": 100,
         "nullPointMode": "connected",
         "nullText": null,
-        "options": {},
         "pluginVersion": "6.6.0",
         "postfix": "",
         "postfixFontSize": "50%",
@@ -487,7 +394,7 @@
           {
             "refCount": 0,
             "refId": "A",
-            "target": "screeps.planc.shard3.gclLevel"
+            "target": "screeps.planc.shard2.gclLevel"
           }
         ],
         "thresholds": "",
@@ -515,6 +422,12 @@
           "#F2495C"
         ],
         "datasource": null,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
         "format": "none",
         "gauge": {
           "maxValue": 100,
@@ -525,9 +438,9 @@
         },
         "gridPos": {
           "h": 2,
-          "w": 4,
-          "x": 20,
-          "y": 10
+          "w": 6,
+          "x": 18,
+          "y": 9
         },
         "id": 12,
         "interval": null,
@@ -546,7 +459,6 @@
         "maxDataPoints": 100,
         "nullPointMode": "connected",
         "nullText": null,
-        "options": {},
         "postfix": "",
         "postfixFontSize": "50%",
         "prefix": "",
@@ -570,7 +482,7 @@
         "targets": [
           {
             "refId": "A",
-            "target": "screeps.planc.shard3.gplLevel"
+            "target": "screeps.planc.shard2.gplLevel"
           }
         ],
         "thresholds": "",
@@ -594,16 +506,22 @@
         "dashLength": 10,
         "dashes": false,
         "datasource": null,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
         "fill": 1,
         "fillGradient": 0,
         "gridPos": {
-          "h": 9,
-          "w": 12,
+          "h": 8,
+          "w": 24,
           "x": 0,
-          "y": 12
+          "y": 11
         },
         "hiddenSeries": false,
-        "id": 20,
+        "id": 33,
         "legend": {
           "alignAsTable": true,
           "avg": false,
@@ -618,15 +536,16 @@
         "linewidth": 1,
         "nullPointMode": "connected",
         "options": {
-          "dataLinks": []
+          "alertThreshold": true
         },
         "percentage": false,
+        "pluginVersion": "7.3.1",
         "pointradius": 2,
         "points": false,
         "renderer": "flot",
         "seriesOverrides": [
           {
-            "alias": "screeps.planc.shard3.terminalW34N2",
+            "alias": "screeps.planc.shard2.terminalW21S33",
             "yaxis": 2
           }
         ],
@@ -637,19 +556,20 @@
           {
             "refCount": 0,
             "refId": "A",
-            "target": "screeps.planc.shard3.storageW34N2"
+            "target": "screeps.planc.shard2.storageW21S33"
           },
           {
             "refCount": 0,
             "refId": "B",
-            "target": "screeps.planc.shard3.terminalW34N2"
+            "target": "screeps.planc.shard2.terminalW21S33",
+            "textEditor": true
           }
         ],
         "thresholds": [],
         "timeFrom": null,
         "timeRegions": [],
         "timeShift": null,
-        "title": "W34N2 Resource Statues",
+        "title": "W21S33 Resources",
         "tooltip": {
           "shared": true,
           "sort": 0,
@@ -665,119 +585,19 @@
         },
         "yaxes": [
           {
-            "decimals": null,
             "format": "short",
-            "label": "Storage",
+            "label": "storage",
             "logBase": 1,
             "max": null,
-            "min": null,
+            "min": "0",
             "show": true
           },
           {
             "format": "short",
-            "label": "Terminal",
+            "label": "terminal",
             "logBase": 1,
             "max": null,
-            "min": null,
-            "show": true
-          }
-        ],
-        "yaxis": {
-          "align": false,
-          "alignLevel": null
-        }
-      },
-      {
-        "aliasColors": {},
-        "bars": false,
-        "dashLength": 10,
-        "dashes": false,
-        "datasource": null,
-        "fill": 1,
-        "fillGradient": 0,
-        "gridPos": {
-          "h": 9,
-          "w": 12,
-          "x": 12,
-          "y": 12
-        },
-        "hiddenSeries": false,
-        "id": 22,
-        "legend": {
-          "alignAsTable": true,
-          "avg": false,
-          "current": true,
-          "max": true,
-          "min": true,
-          "show": true,
-          "total": false,
-          "values": true
-        },
-        "lines": true,
-        "linewidth": 1,
-        "nullPointMode": "connected",
-        "options": {
-          "dataLinks": []
-        },
-        "percentage": false,
-        "pointradius": 2,
-        "points": false,
-        "renderer": "flot",
-        "seriesOverrides": [
-          {
-            "alias": "screeps.planc.shard3.terminalW34N3",
-            "yaxis": 2
-          }
-        ],
-        "spaceLength": 10,
-        "stack": false,
-        "steppedLine": false,
-        "targets": [
-          {
-            "refCount": 0,
-            "refId": "A",
-            "target": "screeps.planc.shard3.storageW34N3"
-          },
-          {
-            "refCount": 0,
-            "refId": "B",
-            "target": "screeps.planc.shard3.terminalW34N3"
-          }
-        ],
-        "thresholds": [],
-        "timeFrom": null,
-        "timeRegions": [],
-        "timeShift": null,
-        "title": "W34N3 Resource Statues",
-        "tooltip": {
-          "shared": true,
-          "sort": 0,
-          "value_type": "individual"
-        },
-        "type": "graph",
-        "xaxis": {
-          "buckets": null,
-          "mode": "time",
-          "name": null,
-          "show": true,
-          "values": []
-        },
-        "yaxes": [
-          {
-            "decimals": null,
-            "format": "short",
-            "label": "Storage",
-            "logBase": 1,
-            "max": null,
-            "min": null,
-            "show": true
-          },
-          {
-            "format": "short",
-            "label": "Terminal",
-            "logBase": 1,
-            "max": null,
-            "min": null,
+            "min": "0",
             "show": true
           }
         ],
@@ -793,13 +613,20 @@
         "dashes": false,
         "datasource": null,
         "description": "",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "links": []
+          },
+          "overrides": []
+        },
         "fill": 1,
         "fillGradient": 0,
         "gridPos": {
-          "h": 9,
+          "h": 8,
           "w": 12,
           "x": 0,
-          "y": 21
+          "y": 19
         },
         "hiddenSeries": false,
         "id": 30,
@@ -817,32 +644,28 @@
         "linewidth": 1,
         "nullPointMode": "connected",
         "options": {
-          "dataLinks": []
+          "alertThreshold": true
         },
         "percentage": false,
+        "pluginVersion": "7.3.1",
         "pointradius": 2,
         "points": false,
         "renderer": "flot",
-        "seriesOverrides": [
-          {
-            "alias": "screeps.planc.shard3.tickDuration",
-            "yaxis": 2
-          }
-        ],
+        "seriesOverrides": [],
         "spaceLength": 10,
         "stack": false,
         "steppedLine": false,
         "targets": [
           {
             "refId": "A",
-            "target": "screeps.planc.shard3.tickDuration"
+            "target": "screeps.planc.shard2.tickDuration"
           }
         ],
         "thresholds": [],
         "timeFrom": "1h",
         "timeRegions": [],
         "timeShift": null,
-        "title": "Shard3 Tick Duration (last 10 minutes)",
+        "title": "Shard2 Tick Duration (last 10 minutes)",
         "tooltip": {
           "shared": true,
           "sort": 0,
@@ -860,7 +683,7 @@
           {
             "decimals": null,
             "format": "short",
-            "label": null,
+            "label": "Second",
             "logBase": 1,
             "max": "10",
             "min": "0",
@@ -888,13 +711,20 @@
         "dashes": false,
         "datasource": null,
         "decimals": null,
+        "fieldConfig": {
+          "defaults": {
+            "custom": {},
+            "links": []
+          },
+          "overrides": []
+        },
         "fill": 1,
         "fillGradient": 0,
         "gridPos": {
-          "h": 9,
+          "h": 8,
           "w": 12,
           "x": 12,
-          "y": 21
+          "y": 19
         },
         "hiddenSeries": false,
         "id": 28,
@@ -904,6 +734,7 @@
           "current": true,
           "max": true,
           "min": true,
+          "rightSide": false,
           "show": true,
           "total": false,
           "values": true
@@ -912,16 +743,21 @@
         "linewidth": 1,
         "nullPointMode": "connected",
         "options": {
-          "dataLinks": []
+          "alertThreshold": true
         },
         "percentage": false,
+        "pluginVersion": "7.3.1",
         "pointradius": 2,
         "points": false,
         "renderer": "flot",
         "seriesOverrides": [
           {
-            "alias": "screeps.planc.shard3.credits",
+            "alias": "screeps.planc.shard2.credits",
             "color": "rgb(255, 255, 255)"
+          },
+          {
+            "alias": "screeps.planc.shard2.pixel",
+            "yaxis": 2
           }
         ],
         "spaceLength": 10,
@@ -929,15 +765,21 @@
         "steppedLine": false,
         "targets": [
           {
+            "refCount": 0,
             "refId": "A",
-            "target": "screeps.planc.shard3.credits"
+            "target": "screeps.planc.shard2.credits"
+          },
+          {
+            "refCount": 0,
+            "refId": "B",
+            "target": "screeps.planc.shard2.pixel"
           }
         ],
         "thresholds": [],
         "timeFrom": null,
         "timeRegions": [],
         "timeShift": null,
-        "title": "Credits",
+        "title": "Credits & pixels",
         "tooltip": {
           "shared": true,
           "sort": 0,
@@ -962,8 +804,9 @@
             "show": true
           },
           {
+            "decimals": null,
             "format": "short",
-            "label": null,
+            "label": "pixels",
             "logBase": 1,
             "max": null,
             "min": null,
@@ -985,6 +828,12 @@
           "#d44a3a"
         ],
         "datasource": "ScreepsPlus-Graphite",
+        "fieldConfig": {
+          "defaults": {
+            "custom": {}
+          },
+          "overrides": []
+        },
         "format": "none",
         "gauge": {
           "maxValue": 100,
@@ -997,7 +846,7 @@
           "h": 2,
           "w": 24,
           "x": 0,
-          "y": 30
+          "y": 27
         },
         "id": 18,
         "interval": null,
@@ -1016,7 +865,6 @@
         "maxDataPoints": 100,
         "nullPointMode": "connected",
         "nullText": null,
-        "options": {},
         "postfix": "",
         "postfixFontSize": "50%",
         "prefix": "",
@@ -1040,7 +888,7 @@
         "targets": [
           {
             "refId": "A",
-            "target": "screeps.planc.shard3.gameTime"
+            "target": "screeps.planc.shard2.gameTime"
           }
         ],
         "thresholds": "",
@@ -1060,7 +908,7 @@
       }
     ],
     "refresh": "30s",
-    "schemaVersion": 22,
+    "schemaVersion": 26,
     "style": "dark",
     "tags": [
       "Screeps"
@@ -1069,7 +917,7 @@
       "list": []
     },
     "time": {
-      "from": "now-6h",
+      "from": "now-12h",
       "to": "now"
     },
     "timepicker": {
@@ -1089,5 +937,5 @@
     "timezone": "",
     "title": "Screep",
     "uid": "dj3OHL_Zk",
-    "version": 49
+    "version": 76
   }
