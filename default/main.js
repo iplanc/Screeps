@@ -1,8 +1,8 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-20 13:58:36
- * @LastEditTime: 2020-08-20 14:11:19
- * @FilePath: \Screeps\main.js
+ * @LastEditTime: 2020-12-19 11:22:06
+ * @FilePath: \Screeps\default\main.js
  */
 
 var autoattack      = require('auto.attack');
@@ -54,5 +54,5 @@ module.exports.loop = function() {
 	autoSpawn.run();
 	autoTower.run();
 	autoWork.run();
-	//stuffPower.run();
+    //stuffPower.run();
 }

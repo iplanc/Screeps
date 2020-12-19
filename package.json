@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@types/lodash": "^3.10.1",
+    "@types/screeps": "^3.2.1"
+  },
+  "scripts": {
+    "start": "multimeter"
+  },
+  "devDependencies": {
+    "screeps-multimeter": "^1.11.1"
+  }
+}

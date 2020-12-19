@@ -1,2 +1,5 @@
 # auto.attack.js
 # auto.defence.js
+/node_modules/*
+package-lock.json
+screeps-multimeter.json
