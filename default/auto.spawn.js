@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-12-19 10:38:18
- * @LastEditTime: 2020-12-21 12:23:50
+ * @LastEditTime: 2020-12-21 13:10:09
  * @FilePath: \Screeps\default\auto.spawn.js
  */
 
@@ -26,6 +26,7 @@ var autoSpawn = {
         var clm = CLAIM;
 
         var creepTable = [
+            // builder, harvester, harvesterFar, miner, repairer, supplier, transporter, transporterSpc, upgrader
             [0, 0, 0, 0, 0, 0, 0, 0, 0], // lv.0
             [1, 1, 0, 0, 0, 0, 0, 0, 1], // lv.1
             [1, 1, 0, 0, 0, 0, 0, 0, 3], // lv.2
