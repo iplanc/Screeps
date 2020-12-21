@@ -1,6 +1,14 @@
 # auto.attack.js
 # auto.defence.js
+
+# node.js
 /node_modules/*
+
+# config
 package-lock.json
 screeps-multimeter.json
 .screeps-multimeter.history
+
+# log
+screeps.log
+screepErrors.log
