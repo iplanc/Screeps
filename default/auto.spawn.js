@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-12-19 10:38:18
- * @LastEditTime: 2020-12-21 12:19:42
+ * @LastEditTime: 2020-12-21 12:23:50
  * @FilePath: \Screeps\default\auto.spawn.js
  */
 
@@ -54,7 +54,7 @@ var autoSpawn = {
             [wok, cry, mov],
             [wok, cry, mov],
             [wok, cry, mov],
-            [wok, wok, wok, wok, wok, wok, cry, cry, cry, cry, cry, cry, cry, cry, cry, cry, cry, cry, mov, mov],
+            [wok, wok, wok, wok, cry, cry, cry, cry, mov, mov],
             [wok, wok, wok, wok, wok, wok, cry, cry, cry, cry, cry, cry, cry, cry, cry, cry, cry, cry, mov, mov],
             [wok, wok, wok, wok, wok, wok, cry, cry, cry, cry, cry, cry, cry, cry, cry, cry, cry, cry, mov, mov],
             [wok, wok, wok, wok, wok, wok, cry, cry, cry, cry, cry, cry, cry, cry, cry, cry, cry, cry, mov, mov],
