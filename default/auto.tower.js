@@ -1,65 +1,37 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-20 13:58:36
- * @LastEditTime: 2020-08-20 14:09:44
- * @FilePath: \Screeps\auto.tower.js
+ * @LastEditTime: 2020-12-21 12:41:05
+ * @FilePath: \Screeps\default\auto.tower.js
  */
 
 var autoTower = {
 
 	run: function() {
-		var fixingMode = 0;
-
 		for (var name in Game.rooms) {
 			var towers = Game.rooms[name].find(FIND_STRUCTURES, {
 				filter: (structure) => structure.structureType == STRUCTURE_TOWER
-			});
+            });
+            var Hostiles = Game.rooms[name].find(FIND_HOSTILE_CREEPS, {
+                filter: (creep) =>  (creep.owner.username != 'TheBlackPrince') ||
+                                    (creep.owner.username != 'bestkurisu')
+            });
 
-			if (towers.length) {
-				var Hostiles = Game.rooms[name].find(FIND_HOSTILE_CREEPS, {
-					filter: (creep) =>  (creep.owner.username != 'TheBlackPrince') ||
-										(creep.owner.username != 'bestkurisu')
-				});
-				if (Hostiles.length > 0) {
-					fixingMode = 0;
+			if (Hostiles.length) {
+				if (towers.length > 0) {
 					for (var i = 0; i < towers.length; i++) console.log(towers[i].attack(Hostiles[0]));
 				}
-				else {
-					fixingMode = 1;
-				}
-			}
-			else {
-				continue;
-			}
-
-			if (fixingMode) {
-				if (towers[0]) {
-					var closestDamagedStructure = towers[0].pos.findInRange(FIND_STRUCTURES, 20, {
+            }
+            else {
+                for (var i = 0; i < towers.length; i++) {
+                    var closestDamagedStructure = towers[i].pos.findInRange(FIND_STRUCTURES, 20, {
 						filter: (structure) => (structure.structureType != STRUCTURE_WALL) && (structure.structureType != STRUCTURE_RAMPART) && (structure.hits < structure.hitsMax)
 					});
 					closestDamagedStructure.sort((a,b) => a.hits - b.hits);
-					if (closestDamagedStructure.length > 0 && towers[0] != null) {
-						towers[0].repair(closestDamagedStructure[0]);
+					if (closestDamagedStructure.length > 0 && towers[i] != null) {
+						towers[i].repair(closestDamagedStructure[0]);
 					}
-				}
-				if (towers[1]) {
-					var closestDamagedStructure = towers[1].pos.findInRange(FIND_STRUCTURES, 20, {
-						filter: (structure) => (structure.structureType != STRUCTURE_WALL) && (structure.structureType != STRUCTURE_RAMPART) && (structure.hits < structure.hitsMax)
-					});
-					closestDamagedStructure.sort((a,b) => a.hits - b.hits);
-					if (closestDamagedStructure.length > 0) {
-						towers[1].repair(closestDamagedStructure[0]);
-					}
-				}
-				if (towers[2]) {
-					var closestDamagedStructure = towers[2].pos.findInRange(FIND_STRUCTURES, 20, {
-						filter: (structure) => (structure.structureType != STRUCTURE_WALL) && (structure.structureType != STRUCTURE_RAMPART) && (structure.hits < structure.hitsMax)
-					});
-					closestDamagedStructure.sort((a,b) => a.hits - b.hits);
-					if (closestDamagedStructure.length > 0) {
-						towers[2].repair(closestDamagedStructure[0]);
-					}
-				}
+                }
 			}
 
 			var wounded = Game.rooms[name].find(FIND_MY_CREEPS, {
