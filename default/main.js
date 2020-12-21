@@ -1,7 +1,7 @@
 /*
  * @Author: PlanC
  * @Date: 2020-08-20 13:58:36
- * @LastEditTime: 2020-12-21 13:03:36
+ * @LastEditTime: 2020-12-21 13:05:26
  * @FilePath: \Screeps\default\main.js
  */
 
@@ -19,7 +19,7 @@ var autoSpawn       = require('auto.spawn');
 var autoTower       = require('auto.tower');
 var autoWork        = require('auto.work');
 var stuffPower      = require('stuff.power');
-var watcher         = require('watch-client.js');
+var watcher         = require('watch-client');
 
 var marketMode = 1;
 
